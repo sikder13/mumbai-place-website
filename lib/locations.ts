@@ -13,7 +13,8 @@ export type Location = {
 };
 
 // Menufy menus are JS-rendered and not publicly fetchable; owner updates prices on Menufy.
-// Hours are placeholders pending owner confirmation.
+// Hours mirror the Menufy/Beyond Menu schedule. Both locations observe a brief
+// midday pause (1–2pm) on Fri/Sat that carries over from the existing operation.
 export const locations: Location[] = [
   {
     slug: "prospect-heights",
@@ -23,7 +24,12 @@ export const locations: Location[] = [
     addressLine2: "Brooklyn, NY 11238",
     phone: "+17183987776",
     phoneDisplay: "(718) 398-7776",
-    hours: ["Mon–Thu · 12pm – 10pm", "Fri–Sat · 12pm – 11pm", "Sun · 12pm – 10pm"],
+    hours: [
+      "Mon – Thu · 11am – 10pm",
+      "Fri · 11am – 1pm, 2pm – 10:45pm",
+      "Sat · 11am – 10:45pm",
+      "Sun · 11am – 10pm",
+    ],
     menufyUrl: "https://vanderbiltave.mumbaiplacenyc.com/",
     googleMapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Mumbai+Place+655+Vanderbilt+Ave+Brooklyn+NY",
@@ -38,7 +44,11 @@ export const locations: Location[] = [
     addressLine2: "Brooklyn, NY 11211",
     phone: "+17185763352",
     phoneDisplay: "(718) 576-3352",
-    hours: ["Mon–Thu · 12pm – 10pm", "Fri–Sat · 12pm – 11pm", "Sun · 12pm – 10pm"],
+    hours: [
+      "Mon – Thu · 11am – 9:45pm",
+      "Fri – Sat · 11am – 1pm, 2pm – 10:45pm",
+      "Sun · 11am – 9:45pm",
+    ],
     menufyUrl: "https://williamsburg.mumbaiplacenyc.com/",
     googleMapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Mumbai+Place+493+Grand+Street+Brooklyn+NY",
