@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/site/Container";
+import { ArticleJsonLd } from "@/components/site/JsonLd";
 import { getPostSlugs, formatPostDate, type PostMetadata } from "@/lib/blog";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -28,9 +29,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const loaded = await loadPost(slug);
   if (!loaded) return {};
+  const { title, excerpt, date, author } = loaded.metadata;
   return {
-    title: `${loaded.metadata.title} — Mumbai Place`,
-    description: loaded.metadata.excerpt,
+    title,
+    description: excerpt,
+    openGraph: {
+      type: "article",
+      title,
+      description: excerpt,
+      url: `/blog/${slug}`,
+      publishedTime: date,
+      authors: [author],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: excerpt,
+    },
   };
 }
 
@@ -42,6 +57,13 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <article className="bg-[color:var(--color-surface)]">
+      <ArticleJsonLd
+        slug={slug}
+        title={metadata.title}
+        description={metadata.excerpt}
+        date={metadata.date}
+        author={metadata.author}
+      />
       <header className="border-b border-[color:var(--color-line)]">
         <Container size="narrow" className="py-20 sm:py-24">
           <p className="text-[0.625rem] uppercase tracking-[0.35em] text-[color:var(--color-accent-saffron)]">

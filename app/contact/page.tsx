@@ -6,7 +6,7 @@ import { locations } from "@/lib/locations";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact — Mumbai Place",
+  title: "Contact",
   description:
     "Questions, press, private dining, or just saying hello. Write to us or pick up the phone — we answer both.",
 };

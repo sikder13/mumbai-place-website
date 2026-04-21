@@ -4,7 +4,7 @@ import { Container } from "@/components/site/Container";
 import { getAllPosts, formatPostDate } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog — Mumbai Place",
+  title: "Blog",
   description:
     "Notes on the food, the kitchen, and the two rooms. Slow writing from a Brooklyn Indian restaurant.",
 };

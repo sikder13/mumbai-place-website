@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { locations } from "@/lib/locations";
 
 export const metadata: Metadata = {
-  title: "About — Mumbai Place",
+  title: "About",
   description:
     "Mumbai Place is a Brooklyn Indian restaurant with two neighborhood rooms — Prospect Heights and Williamsburg — serving modern interpretations of classic dishes, cooked from scratch each day.",
 };

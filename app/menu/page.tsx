@@ -7,7 +7,7 @@ import { OrderOnlineButton } from "@/components/site/OrderOnlineButton";
 import { menuSections } from "@/lib/menu";
 
 export const metadata: Metadata = {
-  title: "Menu — Mumbai Place",
+  title: "Menu",
   description:
     "Modern interpretations of classic Indian cooking: starters, tandoor, curries, biryani, breads, and desserts. Mumbai Place — Brooklyn.",
 };

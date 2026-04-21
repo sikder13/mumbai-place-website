@@ -3,6 +3,7 @@ import { Fraunces, Inter } from "next/font/google";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { OrderSheetProvider } from "@/components/site/OrderOnlineSheet";
+import { JsonLd } from "@/components/site/JsonLd";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -58,6 +59,7 @@ export default function RootLayout({
       className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-[color:var(--color-surface)] text-[color:var(--color-ink)]">
+        <JsonLd />
         <OrderSheetProvider>
           <Header />
           <main className="flex-1">{children}</main>

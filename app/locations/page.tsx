@@ -5,7 +5,7 @@ import { LocationCard } from "@/components/locations/LocationCard";
 import { locations } from "@/lib/locations";
 
 export const metadata: Metadata = {
-  title: "Locations — Mumbai Place",
+  title: "Locations",
   description:
     "Two Mumbai Place rooms in Brooklyn: Prospect Heights on Vanderbilt Avenue and Williamsburg on Grand Street. Hours, phone numbers, and directions.",
 };
