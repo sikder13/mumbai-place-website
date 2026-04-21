@@ -73,7 +73,7 @@ export function OrderSheetProvider({ children }: { children: ReactNode }) {
         >
           <div className="mb-4 flex items-start justify-between gap-4">
             <div>
-              <p className="text-[0.625rem] uppercase tracking-[0.25em] text-[color:var(--color-accent-gold)]">
+              <p className="text-[0.625rem] uppercase tracking-[0.25em] text-[color:var(--color-accent-saffron)]">
                 Order Online
               </p>
               <h2 className="font-display mt-2 text-2xl tracking-tight">
@@ -97,7 +97,7 @@ export function OrderSheetProvider({ children }: { children: ReactNode }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}
-                  className="group flex items-center justify-between rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-5 transition-colors hover:border-[color:var(--color-accent-gold)]"
+                  className="group flex items-center justify-between rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-5 transition-colors hover:border-[color:var(--color-accent-saffron)]"
                 >
                   <div>
                     <p className="font-display text-lg tracking-tight">
@@ -107,7 +107,7 @@ export function OrderSheetProvider({ children }: { children: ReactNode }) {
                       {loc.addressLine1}
                     </p>
                   </div>
-                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-[color:var(--color-accent-gold)] transition-transform group-hover:translate-x-1">
+                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-[color:var(--color-accent-saffron)] transition-transform group-hover:translate-x-1">
                     Order &rarr;
                   </span>
                 </a>

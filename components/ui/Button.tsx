@@ -6,15 +6,15 @@ type Variant = "primary" | "secondary" | "ghost";
 type Size = "md" | "lg";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-tight transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent-gold)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--color-surface)] disabled:opacity-50";
+  "inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-tight transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent-saffron)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--color-surface)] disabled:opacity-50";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-[color:var(--color-accent-gold)] text-[color:var(--color-ink)] hover:bg-[color:var(--color-accent-gold-soft)]",
+    "bg-[color:var(--color-accent-saffron)] text-[color:var(--color-surface-elevated)] hover:bg-[color:var(--color-accent-saffron-deep)]",
   secondary:
     "bg-[color:var(--color-ink)] text-[color:var(--color-surface-elevated)] hover:bg-[color:var(--color-ink)]/85",
   ghost:
-    "border border-[color:var(--color-line)] text-[color:var(--color-ink)] hover:border-[color:var(--color-ink)]/30 hover:bg-[color:var(--color-surface-elevated)]",
+    "border border-[color:var(--color-line)] text-[color:var(--color-ink)] hover:border-[color:var(--color-ink)]/40 hover:bg-[color:var(--color-surface-elevated)]",
 };
 
 const sizes: Record<Size, string> = {

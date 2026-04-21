@@ -29,7 +29,7 @@ export function Footer() {
           <div className="grid gap-10 sm:grid-cols-2">
             {locations.map((loc) => (
               <div key={loc.slug}>
-                <p className="text-[0.625rem] uppercase tracking-[0.25em] text-[color:var(--color-accent-gold)]">
+                <p className="text-[0.625rem] uppercase tracking-[0.25em] text-[color:var(--color-accent-saffron)]">
                   {loc.neighborhood}
                 </p>
                 <p className="mt-3 font-display text-lg tracking-tight">
@@ -40,7 +40,7 @@ export function Footer() {
                 </p>
                 <a
                   href={`tel:${loc.phone}`}
-                  className="mt-2 block text-sm text-[color:var(--color-ink)] hover:text-[color:var(--color-accent-gold)]"
+                  className="mt-2 block text-sm text-[color:var(--color-ink)] hover:text-[color:var(--color-accent-saffron)]"
                 >
                   {loc.phoneDisplay}
                 </a>
@@ -48,7 +48,7 @@ export function Footer() {
                   href={loc.menufyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-block text-xs font-medium uppercase tracking-[0.2em] text-[color:var(--color-accent-gold)] hover:text-[color:var(--color-ink)]"
+                  className="mt-3 inline-block text-xs font-medium uppercase tracking-[0.2em] text-[color:var(--color-accent-saffron)] hover:text-[color:var(--color-ink)]"
                 >
                   Order &rarr;
                 </a>
@@ -56,7 +56,7 @@ export function Footer() {
             ))}
           </div>
           <nav aria-label="Footer">
-            <p className="text-[0.625rem] uppercase tracking-[0.25em] text-[color:var(--color-accent-gold)]">
+            <p className="text-[0.625rem] uppercase tracking-[0.25em] text-[color:var(--color-accent-saffron)]">
               Explore
             </p>
             <ul className="mt-4 space-y-2">
@@ -64,7 +64,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm text-[color:var(--color-ink)] hover:text-[color:var(--color-accent-gold)]"
+                    className="text-sm text-[color:var(--color-ink)] hover:text-[color:var(--color-accent-saffron)]"
                   >
                     {item.label}
                   </Link>

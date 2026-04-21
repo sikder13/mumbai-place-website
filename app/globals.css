@@ -8,6 +8,9 @@
   --color-ink-muted: #5e574f;
   --color-accent-gold: #c9a15b;
   --color-accent-gold-soft: #e8d7a8;
+  --color-accent-saffron: #c44536;
+  --color-accent-saffron-soft: #e9bcb6;
+  --color-accent-saffron-deep: #9c3529;
   --color-line: rgba(26, 23, 20, 0.08);
 
   --font-display: var(--font-fraunces);
@@ -25,12 +28,71 @@ body {
 }
 
 ::selection {
-  background: var(--color-accent-gold-soft);
-  color: var(--color-ink);
+  background: var(--color-accent-saffron);
+  color: var(--color-surface-elevated);
 }
 
 .font-display {
   font-family: var(--font-display), ui-serif, Georgia, serif;
   font-optical-sizing: auto;
   letter-spacing: -0.01em;
+}
+
+.hero-word {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(16px);
+  animation: hero-bloom 1100ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity, filter;
+}
+
+@keyframes hero-bloom {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.hero-zoom {
+  animation: hero-zoom 28s ease-in-out infinite alternate;
+  transform-origin: center;
+  will-change: transform;
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.hero-scroll-cue {
+  animation: hero-scroll-cue 2.4s ease-in-out infinite;
+}
+
+@keyframes hero-scroll-cue {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-word,
+  .hero-zoom,
+  .hero-scroll-cue {
+    animation: none;
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
 }

@@ -52,7 +52,7 @@ export function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-sm tracking-wide text-[color:var(--color-ink)] transition-colors hover:text-[color:var(--color-accent-gold)]"
+                  className="text-sm tracking-wide text-[color:var(--color-ink)] transition-colors hover:text-[color:var(--color-accent-saffron)]"
                 >
                   {item.label}
                 </Link>
