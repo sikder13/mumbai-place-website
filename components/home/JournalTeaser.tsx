@@ -17,17 +17,17 @@ export function JournalTeaser({ posts = [] }: Props) {
 
   return (
     <section
-      aria-labelledby="journal-heading"
+      aria-labelledby="blog-heading"
       className="bg-[color:var(--color-surface-elevated)]"
     >
       <Container className="py-24 sm:py-28">
         <div className="mb-14 flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-xl">
             <p className="text-[0.625rem] uppercase tracking-[0.35em] text-[color:var(--color-accent-saffron)]">
-              Journal
+              Blog
             </p>
             <h2
-              id="journal-heading"
+              id="blog-heading"
               className="font-display mt-6 text-4xl leading-[1.1] tracking-tight sm:text-5xl"
             >
               Stories from the kitchens.
@@ -74,7 +74,7 @@ export function JournalTeaser({ posts = [] }: Props) {
               &ldquo;The first post is being written between service.&rdquo;
             </p>
             <p className="mt-4 text-sm text-[color:var(--color-ink-muted)]">
-              The journal arrives soon — notes on technique, suppliers, the
+              The blog arrives soon — notes on technique, suppliers, the
               rooms, and the occasional recipe.
             </p>
           </div>

@@ -11,7 +11,7 @@ const nav = [
   { href: "/menu", label: "Menu" },
   { href: "/locations", label: "Locations" },
   { href: "/about", label: "About" },
-  { href: "/blog", label: "Journal" },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
