@@ -75,7 +75,18 @@ export function Footer() {
         </div>
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-[color:var(--color-line)] pt-8 text-xs text-[color:var(--color-ink-muted)] sm:flex-row sm:items-center">
           <p>&copy; {year} Mumbai Place. All rights reserved.</p>
-          <p>Made in Brooklyn.</p>
+          <p>
+            Made with love ❤️ by{" "}
+            <a
+              href="https://nahltech.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[color:var(--color-ink)] underline decoration-[color:var(--color-accent-saffron)] decoration-1 underline-offset-2 hover:text-[color:var(--color-accent-saffron)]"
+            >
+              Nahl Tech
+            </a>
+            .
+          </p>
         </div>
       </Container>
     </footer>
