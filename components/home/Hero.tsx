@@ -1,11 +1,8 @@
-import Image from "next/image";
 import { Container } from "@/components/site/Container";
 import { OrderOnlineButton } from "@/components/site/OrderOnlineButton";
 import { Button } from "@/components/ui/Button";
-
-type Props = {
-  backgroundImage?: string;
-};
+import { HeroDishCarousel } from "@/components/home/HeroDishCarousel";
+import { signatureDishes } from "@/lib/signatures";
 
 const headline = [
   { text: "Modern", italic: false },
@@ -16,7 +13,7 @@ const headline = [
   { text: "cooking.", italic: true },
 ] as const;
 
-export function Hero({ backgroundImage = "/images/hero/hero.jpg" }: Props) {
+export function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-[color:var(--color-surface)]">
       <div
@@ -88,14 +85,7 @@ export function Hero({ backgroundImage = "/images/hero/hero.jpg" }: Props) {
         </div>
 
         <div className="relative mx-4 mb-6 h-[60vh] overflow-hidden rounded-3xl lg:mx-0 lg:mb-0 lg:h-auto lg:min-h-[82vh] lg:rounded-none lg:rounded-l-[3rem]">
-          <Image
-            src={backgroundImage}
-            alt=""
-            fill
-            priority
-            sizes="(min-width: 1024px) 43vw, 100vw"
-            className="hero-zoom object-cover"
-          />
+          <HeroDishCarousel dishes={signatureDishes} />
           <div
             aria-hidden
             className="absolute inset-y-0 left-0 hidden w-px bg-[color:var(--color-accent-gold)]/30 lg:block"

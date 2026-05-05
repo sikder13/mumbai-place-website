@@ -55,21 +55,6 @@ body {
   }
 }
 
-.hero-zoom {
-  animation: hero-zoom 28s ease-in-out infinite alternate;
-  transform-origin: center;
-  will-change: transform;
-}
-
-@keyframes hero-zoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.08);
-  }
-}
-
 .hero-scroll-cue {
   animation: hero-scroll-cue 2.4s ease-in-out infinite;
 }
@@ -88,7 +73,6 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .hero-word,
-  .hero-zoom,
   .hero-scroll-cue {
     animation: none;
     opacity: 1;
