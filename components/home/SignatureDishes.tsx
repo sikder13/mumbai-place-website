@@ -56,7 +56,7 @@ export function SignatureDishes() {
                       />
                       <div
                         aria-hidden
-                        className="absolute inset-0 bg-gradient-to-t from-[color:var(--color-ink)]/80 via-[color:var(--color-ink)]/20 to-transparent"
+                        className="absolute inset-0 bg-gradient-to-t from-[color:var(--color-ink)]/55 via-[color:var(--color-ink)]/5 to-transparent"
                       />
                     </>
                   ) : (
