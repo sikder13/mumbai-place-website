@@ -4,12 +4,12 @@ import { MenuSection } from "@/components/menu/MenuSection";
 import { MenuNav } from "@/components/menu/MenuNav";
 import { StickyOrderBar } from "@/components/menu/StickyOrderBar";
 import { OrderOnlineButton } from "@/components/site/OrderOnlineButton";
-import { menuSections } from "@/lib/menu";
+import { menuSections, menuDisclaimer } from "@/lib/menu";
 
 export const metadata: Metadata = {
   title: "Menu",
   description:
-    "Modern interpretations of classic Indian cooking: starters, tandoor, curries, biryani, breads, and desserts. Mumbai Place — Brooklyn.",
+    "Lunch combos, starters, vegetarian and chicken specialties, lamb, goat, seafood, tandoori mains, biryani, breads, and desserts. Mumbai Place — Brooklyn.",
 };
 
 export default function MenuPage() {
@@ -47,8 +47,64 @@ export default function MenuPage() {
               <MenuSection key={section.slug} section={section} />
             ))}
           </div>
+        </Container>
+      </section>
 
-          <aside className="border-t border-[color:var(--color-line)] py-10 text-sm text-[color:var(--color-ink-muted)]">
+      <section
+        aria-labelledby="download-menu-heading"
+        className="relative isolate overflow-hidden border-y border-[color:var(--color-line)] bg-[color:var(--color-surface-elevated)] text-[color:var(--color-ink)]"
+      >
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_20%,rgba(196,69,54,0.10),transparent_55%),radial-gradient(circle_at_85%_85%,rgba(233,188,182,0.45),transparent_60%)]"
+        />
+        <Container className="py-20 sm:py-24">
+          <div className="grid items-center gap-10 md:grid-cols-[1fr_auto] md:gap-16">
+            <div>
+              <p className="text-[0.625rem] uppercase tracking-[0.35em] text-[color:var(--color-accent-saffron)]">
+                Take it with you
+              </p>
+              <h2
+                id="download-menu-heading"
+                className="font-display mt-6 text-4xl leading-[1.05] tracking-tight sm:text-5xl"
+              >
+                The full printed menu.
+              </h2>
+              <p className="mt-5 max-w-md text-base leading-relaxed text-[color:var(--color-ink-muted)]">
+                The same menu we hand you in the dining room — with both
+                addresses, phone numbers, and hours. Save it to your phone or
+                share it with the table.
+              </p>
+            </div>
+            <a
+              href="/menu.pdf"
+              download
+              aria-label="Download the full Mumbai Place menu as a PDF"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[color:var(--color-accent-saffron)] px-6 text-base font-medium tracking-tight text-[color:var(--color-surface-elevated)] transition-colors duration-200 hover:bg-[color:var(--color-accent-saffron-deep)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent-saffron)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--color-surface-elevated)]"
+            >
+              Download menu (PDF)
+              <svg
+                aria-hidden
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-4 w-4"
+              >
+                <path d="M12 3v12" />
+                <path d="m7 10 5 5 5-5" />
+                <path d="M5 21h14" />
+              </svg>
+            </a>
+          </div>
+        </Container>
+      </section>
+
+      <section aria-label="Menu notes" className="bg-[color:var(--color-surface)]">
+        <Container>
+          <aside className="py-10 text-sm text-[color:var(--color-ink-muted)]">
             <p>
               <span className="font-medium text-[color:var(--color-ink)]">
                 Notes.
@@ -68,7 +124,8 @@ export default function MenuPage() {
                 Gluten-free.
               </span>{" "}
               Kitchens share prep surfaces; we cannot guarantee allergen-free
-              dishes. Spice levels are guides — we&rsquo;ll adjust on request.
+              dishes. Spice levels are guides — we&rsquo;ll adjust on request.{" "}
+              {menuDisclaimer}
             </p>
           </aside>
         </Container>

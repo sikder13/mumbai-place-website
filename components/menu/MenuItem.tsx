@@ -28,9 +28,11 @@ export function MenuItem({ item }: { item: MenuItemType }) {
           {item.price}
         </span>
       </div>
-      <p className="mt-1.5 max-w-2xl text-sm leading-relaxed text-[color:var(--color-ink-muted)]">
-        {item.description}
-      </p>
+      {item.description ? (
+        <p className="mt-1.5 max-w-2xl text-sm leading-relaxed text-[color:var(--color-ink-muted)]">
+          {item.description}
+        </p>
+      ) : null}
     </li>
   );
 }

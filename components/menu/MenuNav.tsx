@@ -51,7 +51,7 @@ export function MenuNav({ sections }: Props) {
                     : "bg-[color:var(--color-line)]"
                 }`}
               />
-              {s.slug}
+              {s.navLabel}
             </a>
           </li>
         ))}
